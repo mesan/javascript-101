@@ -1,4 +1,4 @@
-define(["knockout", "repositories/customerRepository"], function(ko, customerRepository) {
+define(["knockout", "toastr", "repositories/customerRepository"], function(ko, toastr, customerRepository) {
 	return function customerViewModel() {
 		var self = this;
 		var customerRepo = new customerRepository();
@@ -9,6 +9,7 @@ define(["knockout", "repositories/customerRepository"], function(ko, customerRep
 		self.getData = function () {
 			customerRepo.getCustomers(function(data) {
 				self.customers(data);
+				toastr.success("Data fetched", "You have fetched data... Hurra!");
 			});
 		};
 		

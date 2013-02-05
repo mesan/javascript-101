@@ -3,7 +3,8 @@ require.config({
 	paths : {
 		"jquery" : "lib/jquery-1.8.3.min",
 		"knockout" : "lib/knockout",
-		"Sammy" : "lib/sammy-latest.min"
+		"Sammy" : "lib/sammy-latest.min",
+		"toastr" : "lib/toastr.min"
 	},
 	
 	/* Rekkefølge */
@@ -11,7 +12,8 @@ require.config({
 		'Sammy' : {
 			deps : ['jquery'],
 			exports : 'Sammy'
-		}
+		},
+		'toastr' : ['jquery']
 	}
 });
 
