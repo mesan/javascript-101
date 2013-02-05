@@ -16,4 +16,10 @@ require.config({
 });
 
 /* Application init */
-require();
+require(["app"], function(app) {
+	try {
+		app.init();
+	} catch (err) {
+		console.log("feil i main! " + err);
+	}
+});
