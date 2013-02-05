@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		
+
 	</head>
 	<body>
 		<section style="display: none;" id="navbarSection" data-bind="visible: visibleNavbarSection">
-			<h1>Navigasjonmeny</h1>			
+			<h1>Navigasjonmeny</h1>
 		</section>
-		
+
 		<section style="display: none;" id="loginSection" data-bind="visible: visibleLoginSection">
 			<h2>LoginSection</h2>
 		</section>
-		
+
+		<section id="customerSection" style="display: none;" data-bind="visible: visibleCustomerSection">
+			<h2>CustomerSection</h2>
+			<div>
+				<button data-bind="click: getData">Hent data</button>
+			</div>
+			<ul data-bind="foreach: customers">
+				<li data-bind="text: $data"></li>
+			</ul>
+		</section>
+
 		<script data-main="scripts/main" src="scripts/lib/require/require.min.js" type="text/javascript"></script>
 	</body>
 </html>
