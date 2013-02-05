@@ -11,5 +11,11 @@ define(["knockout", "repositories/customerRepository"], function(ko, customerRep
 				self.customers(data);
 			});
 		};
+		
+		self.getPosts = function () {
+			customerRepo.getCustomerPost(function(data) {
+				console.log(data);
+			});
+		};
 	};
 });

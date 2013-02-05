@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
+		<link href="styles/bootstrap.css" rel="stylesheet">
 	</head>
 	<body>
 		<section style="display: none;" id="navbarSection" data-bind="visible: visibleNavbarSection">
@@ -20,6 +20,10 @@
 			<ul data-bind="foreach: customers">
 				<li data-bind="text: $data"></li>
 			</ul>
+			
+			<div>
+				<button data-bind="click: getPosts">Hent posten til folket</button>
+			</div>
 		</section>
 
 		<script data-main="scripts/main" src="scripts/lib/require/require.min.js" type="text/javascript"></script>
